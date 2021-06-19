@@ -5,7 +5,7 @@
 # 'data2'. Este pillar deve ser configurado para ser acessível apenas
 # pelos minions Ubuntu, independente da versão.
 
-# Crie um arquivo em /srv/pillar/mysecret.sls, com o seguinte conteúdo:
+# Crie um arquivo em /srv/pillar/lab05/mysecret.sls, com o seguinte conteúdo:
 # mysecretuser: 'root'
 # mysecretpwd: 'Passw0rd123'
 # mysecretlist:
@@ -15,7 +15,7 @@
 # Crie o arquivo /srv/pillar/top.sls, com o seguinte conteúdo:
 # base:
 #   'G@os:Ubuntu':
-#     - mysecret
+#     - lab05.mysecret
 
 # Force os minions a atualizarem seus pillars:
 # salt '*' saltutil.refresh_pillar
