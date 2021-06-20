@@ -4,7 +4,8 @@
 # seja instalado caso o nginx já esteja instalado.
 # Extra: Crie um pillar chamado force_remove_nginx com o valor de True e
 # associe a todos os minions e que caso presente force a removação do
-# nginx e a instalação o apache.
+# nginx e a instalação o apache. Adicione uma entrada de log salt em modo
+# debug informando quando o pacote nginx for removido.
 
 # Crie o arquivo /srv/pillar/lab12/nginx.sls com o seguinte conteúdo:
 # force_remove_nginx: True
@@ -39,6 +40,7 @@
 {%- set force_remove_nginx = salt['pillar.get']('force_remove_nginx', False) %}
 
 {%- if force_remove_nginx is sameas True %}
+{%- do salt.log.debug(‘Removendo pacote ‘ ~ nginx.pkg) %}
 lab12_exe01_remove_nginx:
   pkg.purged:
     - name: {{ nginx.pkg }}
