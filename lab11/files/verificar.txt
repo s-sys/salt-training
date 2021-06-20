@@ -1,0 +1,2 @@
+{% set dmidecode = salt['cmd.run']('dmidecode') -%}
+{{ dmidecode }}
