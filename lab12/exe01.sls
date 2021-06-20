@@ -40,7 +40,7 @@
 {%- set force_remove_nginx = salt['pillar.get']('force_remove_nginx', False) %}
 
 {%- if force_remove_nginx is sameas True %}
-{%- do salt.log.debug(‘Removendo pacote ‘ ~ nginx.pkg) %}
+{%- do salt.log.debug('=====> Removendo pacote ' ~ nginx.pkg) %}
 lab12_exe01_remove_nginx:
   pkg.purged:
     - name: {{ nginx.pkg }}
