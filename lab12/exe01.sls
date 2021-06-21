@@ -10,7 +10,7 @@
 # Crie o arquivo /srv/pillar/lab12/nginx.sls com o seguinte conteúdo:
 # force_remove_nginx: True
 
-# Ajuste o arquivo /srv/pillar/top.sls para conteúdo o seguinte trecho:
+# Ajuste o arquivo /srv/pillar/top.sls para conter o seguinte trecho:
 # base:
 #   '*':
 #     - lab12.nginx
@@ -35,6 +35,9 @@
 # }, default='Ubuntu') %}
 
 # Crie o arquivo /srv/salt/lab12/exe01.sls com o seguinte conteúdo:
+{%- set os = salt['grains.get']('kernel', '') %}
+
+{%- if os == "Linux" %}
 {%- from 'lab12/map.jinja' import apache with context %}
 {%- from 'lab12/map.jinja' import nginx with context %}
 {%- set force_remove_nginx = salt['pillar.get']('force_remove_nginx', False) %}
@@ -64,6 +67,7 @@ lab12_exe01_habilita_servico_apache:
       - pkg: {{ apache.pkg }}
     - onlyif:
       - test $(pgrep -c {{ nginx.proc }}) -eq 0
+{%- endif %}
 
 # Execute o state no minion3 e verifque a saída:
 # salt 'minion3' state.apply lab12.exe01

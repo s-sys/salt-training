@@ -1,0 +1,5 @@
+{% set apache = salt['grains.filter_by']({
+    'Ubuntu': {'pkg': 'apache2', 'srv': 'apache2'},
+    'CentOS': {'pkg': 'httpd', 'srv': 'httpd'},
+    'SUSE': {'pkg': 'apache2', 'srv': 'apache2'},
+}, grain='os', default='Ubuntu') %}
