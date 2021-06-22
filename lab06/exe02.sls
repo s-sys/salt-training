@@ -12,6 +12,8 @@
 # Pode ser necessário forçar a atualização dos grains:
 # salt '*' saltutil.refresh_grains
 
+# Crie um arquivo no salt master em /srv/salt/lab06/exe02.sls com
+# o seguinte conteúdo:
 {% set packages = salt['grains.get']('packages', []) %}
 
 {% for pkg in packages %}
