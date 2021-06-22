@@ -1,5 +1,6 @@
 # Crie um state que garanta que todos os serviços passados como uma lista
-# no pillar services estejam em execução na máquina.
+# no pillar services estejam em execução na máquina. Associe este pillar
+# apenas ao minion3.
 
 # Crie o arquivo /srv/pillar/lab06/services.sls com o seguinte conteúdo:
 # services:
