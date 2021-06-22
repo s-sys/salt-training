@@ -17,7 +17,7 @@
 # pillars antes de prosseguir:
 # salt '*' saltutil.refresh_pillar
 
-{% set services = salt['pillar.get']('services', {}) %}
+{% set services = salt['pillar.get']('services', []) %}
 
 {% for service in services %}
 executa_servico_{{ service }}:

@@ -12,7 +12,7 @@
 # Pode ser necessário forçar a atualização dos grains:
 # salt '*' saltutil.refresh_grains
 
-{% set packages = salt['grains.get']('packages', {}) %}
+{% set packages = salt['grains.get']('packages', []) %}
 
 {% for pkg in packages %}
 lab06_exe02_instala_pacote_{{ pkg }}:
