@@ -36,7 +36,7 @@
 # No salt master crie o arquivo /etc/salt/master.d/reactor.conf com
 # as instruções para o reactor conforme a seguir:
 # reactor:
-#  - salt/beacon/*/inotify//etc/important.txt:
+#   - salt/beacon/*/inotify//etc/important.txt:
 #     - /srv/salt/lab07/exe03.sls
 
 # Após a criação do arquivo o salt master deve ser reiniciado:
