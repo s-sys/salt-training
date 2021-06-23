@@ -3,7 +3,7 @@
 # No minion2 crie o arquivo /etc/salt/minion.d/beacons.conf com
 # o seguinte conteúdo:
 # beacons:
-#  service:
+#   service:
 #     - services:
 #         atd:
 #           onchangeonly: True
