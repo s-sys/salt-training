@@ -41,7 +41,7 @@ lab07_exe02_servico_atd_fora_do_ar:
 # No salt master crie o arquivo /etc/salt/master.d/reactor.conf com
 # as instruções para o reactor conforme a seguir:
 # reactor:
-#  - salt/beacon/*/service/atd:
+#   - salt/beacon/*/service/atd:
 #     - /srv/salt/lab07/exe02.sls
 
 # Após a criação do arquivo o salt master deve ser reiniciado:
