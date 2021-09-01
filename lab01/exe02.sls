@@ -13,10 +13,14 @@
 
 # Realizar a instalação dos minions nas máquinas minion*:
 # Ubuntu
+# apt clean
+# apt update
 # apt install salt-minion
 # CentOS
+# yum clean all
 # yum install salt-minion
 # OpenSUSE
+# zypper clean
 # zypper in salt-minion
 
 # Garantir que o serviço está habilitado para execução automática após reinicialização:
@@ -27,3 +31,8 @@
 # salt-key –L
 # salt-key –a minion1
 # salt-key –a minion2
+# salt-key -a minion3
+# salt-key -A
+
+# Verifque todas as chaves autorizadas no servidor master:
+# salt-key -L
