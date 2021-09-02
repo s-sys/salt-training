@@ -1,5 +1,5 @@
-# Identificação do grains referente as informações da máquina como versão do
-# sistema operacional, número de cores, memória e disco.
+# Identificação dos grains referente às informações da máquina como versão do
+# sistema operacional, número de cores de processamento, memória e disco.
 
 # salt-call --local grains.items
 # local:

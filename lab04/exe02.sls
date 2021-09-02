@@ -1,4 +1,4 @@
-# Criação de um grain customizado chamado sala para conter informação sobre
+# Criação de um grain customizado chamado "sala" para conter a informação sobre
 # a sala onde o equipamento se encontra. Faça a criação do grain e teste
 # sua funcionalidade.
 
