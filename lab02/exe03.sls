@@ -1,4 +1,4 @@
-# Construir exemplos de state e chamada por linha de comando.
+# Construir exemplos de state e chamadas por linha de comando.
 
 # salt-call pkg.install htop
 # salt-call pkg.install sysstat
