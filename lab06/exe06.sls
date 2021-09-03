@@ -29,12 +29,13 @@ instala_software_grain_{{ software }}:
 {% endfor %}
 
 {% else %}
-file.managed:
-  - name: /tmp/softwares.txt
-  - contents: "Nenhuma tabela de softwares definida."
-  - user: root
-  - group: root
-  - mode: "0644"
+cria_arquivo_mensagem:
+  file.managed:
+    - name: /tmp/softwares.txt
+    - contents: "Nenhuma tabela de softwares definida."
+    - user: root
+    - group: root
+    - mode: "0644"
 {% endif %}
 
 # Execute este state em alguns minions do seu ambiente, faça ajustes

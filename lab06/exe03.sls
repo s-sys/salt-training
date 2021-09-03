@@ -7,7 +7,7 @@
 #   password: Passw0rd123
 
 # Configure o top.sls do pillar para que a informação do pillar myuser
-# esteja disponível apenas para o minion minion5, conforme a seguinte:
+# esteja disponível apenas para o minion minion5, conforme abaixo:
 # base:
 #   'minion5':
 #     - lab06.myuser
@@ -16,6 +16,7 @@
 # pillars antes de prosseguir:
 # salt '*' saltutil.refresh_pillar
 
+# Crie o arquivo /srv/salt/lab06/exe03.sls com o seguinte conteúdo:
 {% set user_info = salt['pillar.get']('myuser', '') %}
 
 {% if user_info != '' %}
