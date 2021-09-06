@@ -23,6 +23,7 @@
 # salt '*' grains.item os
 
 # Crie o arquivo /srv/salt/lab12/map.jinja com o seguinte conteúdo:
+# {#
 # {% set apache = salt['grains.filter_by']({
 #     'Ubuntu': {'pkg': 'apache2', 'srv': 'apache2'},
 #     'CentOS': {'pkg': 'httpd', 'srv': 'httpd'},
@@ -34,6 +35,7 @@
 #     'CentOS': {'pkg': 'nginx', 'proc': 'nginx'},
 #     'SUSE': {'pkg': 'nginx', 'proc': 'nginx'},
 # }, default='Ubuntu', grain='os') %}
+# #}
 
 # Crie o arquivo /srv/salt/lab12/exe01.sls com o seguinte conteúdo:
 {%- set os = salt['grains.get']('kernel', '') %}
