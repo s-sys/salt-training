@@ -8,7 +8,7 @@
 # esteja instalado no minion como pré-requisito.
 
 # Crie o arquivo /srv/pillar/lab11/controle.sls com o seguinte conteúdo:
-coloca_arquivo_controle: True
+# coloca_arquivo_controle: True
 
 # Altere o arquivo /srv/pillar/top.sls adicionando o seguinte trecho:
 # base:
@@ -46,8 +46,8 @@ lab11_exe01_instala_sysstat:
 
 # Adicione o arquivo /srv/salt/lab11/files/verificar.txt com o seguinte
 # conteúdo:
-# {% set dmidecode = salt['cmd.run']('dmidecode') -%}
-# {{ dmidecode }}
+# {# {% set dmidecode = salt['cmd.run']('dmidecode') -%} #}
+# {# {{ dmidecode }} #}
 
 # Execute o state no minion5 e verifque a saída:
 # salt 'minion5' state.apply lab11.exe03
