@@ -8,4 +8,5 @@ grains:
     - sysstat
 
 # Verifique se o grains foi definido:
+#
 # salt-call --local grains.item funcoes
